@@ -1,0 +1,9 @@
+export { About } from '@/pages/about/About';
+export { Contact } from '@/pages/contact/Contact';
+export { Experience } from "@/pages/experiences/Experiences"
+export { Experiments } from "@/pages/experiments/Experiments"
+export { Footer } from "@/pages/footer/Footer"
+export { Hero } from "@/pages/hero/Hero"
+export { Philosophy } from "@/pages/philosophy/Philosophy"
+export { Projects } from "@/pages/projects/Projects"
+export { Skills } from "@/pages/skills/Skills"
