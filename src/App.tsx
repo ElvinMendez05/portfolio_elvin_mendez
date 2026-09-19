@@ -9,8 +9,7 @@ import {
   Philosophy, 
   Experiments, 
   Contact, 
-  Footer 
-} from '@/pages/index';
+  Footer } from '@/pages/index';
 
 const App = () => {
   

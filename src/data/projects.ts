@@ -10,7 +10,7 @@ export const projects: Project[] = [
     status: 'in-development',
     category: 'SaaS Platform',
     year: '2025',
-    technologies: ['Node.js', 'Express', 'TypeScript', 'Prisma', 'SQL', 'JWT', 'REST API', 'React'],
+    technologies: ['React', 'vite', 'Node.js', 'Express', 'TypeScript', 'Prisma', 'SQL', 'JWT', 'REST API'],
     links: {
       github: 'https://github.com/elvinmendez',
     },
