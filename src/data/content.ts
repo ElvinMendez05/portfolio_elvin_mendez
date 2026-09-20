@@ -105,9 +105,9 @@ export const navLinks = [
 ];
 
 export const socialLinks = {
-  github: 'https://github.com/elvinmendez',
-  linkedin: 'https://www.linkedin.com/in/elvinmendez',
-  email: 'mailto:elvinmendez.dev@gmail.com',
+  github: 'https://github.com/ElvinMendez05',
+  linkedin: 'https://www.linkedin.com/in/elvin-manuel-mendez-espinosa-a63b44291/',
+  email: 'elvinmendez005@gmail.com',
 };
 
 export const philosophy = [

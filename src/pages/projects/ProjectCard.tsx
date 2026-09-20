@@ -10,7 +10,6 @@ const statusLabels: Record<Project['status'], string> = {
   completed: 'Completed',
 };
 
-
 interface ProjectCardProps {
   project: Project;
   onClick: () => void;
