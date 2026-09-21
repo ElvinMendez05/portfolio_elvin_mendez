@@ -44,7 +44,6 @@ export const skillCategories: SkillCategory[] = [
       { name: 'CrewAI' },
       { name: 'LangGraph' },
       { name: 'OpenAI SDK' },
-      { name: 'MCP' },
     ],
   },
   {
@@ -70,6 +69,20 @@ export const experience: ExperienceItem[] = [
 ];
 
 export const experiments: Experiment[] = [
+
+  {
+    name: '.NET REST APIs',
+    description: 'Backend experiments exploring clean architecture patterns and API design in C# and .NET.',
+    technologies: ['Node js', 'Typescript', '.NET', 'C#', 'SQL Server'],
+    category: 'Backend',
+  },
+  {
+    name: 'Developer Tools',
+    description: 'Small utilities and automation scripts for everyday development workflows.',
+    technologies: ['Node.js', 'TypeScript', 'React', 'Vite'],
+    category: 'Tooling',
+  },
+
   {
     name: 'AI Agent Workflows',
     description: 'Multi-agent systems built with CrewAI and LangGraph for automated research and content tasks.',
@@ -77,23 +90,12 @@ export const experiments: Experiment[] = [
     category: 'AI Agents',
   },
   {
-    name: 'MCP Integrations',
+    name: 'AI Integrations',
     description: 'Model Context Protocol servers connecting AI assistants to external tools and data sources.',
-    technologies: ['MCP', 'TypeScript', 'OpenAI SDK'],
+    technologies: ['TypeScript', 'OpenAI SDK'],
     category: 'AI Tooling',
   },
-  {
-    name: '.NET REST APIs',
-    description: 'Backend experiments exploring clean architecture patterns and API design in C# and .NET.',
-    technologies: ['.NET', 'C#', 'SQL Server'],
-    category: 'Backend',
-  },
-  {
-    name: 'Developer Tools',
-    description: 'Small utilities and automation scripts for everyday development workflows.',
-    technologies: ['Node.js', 'TypeScript'],
-    category: 'Tooling',
-  },
+  
 ];
 
 export const navLinks = [

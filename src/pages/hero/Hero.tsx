@@ -2,7 +2,7 @@ import { motion, type Variants } from 'framer-motion';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { HeroVisual } from './HeroVisual';
 
-const heroTech = ['React', 'TypeScript', 'Node.js', '.NET'];
+const heroTech = ['React', 'Vite', 'TypeScript', 'Node.js', '.NET'];
 
 const container: Variants = {
   hidden: {},
@@ -36,11 +36,12 @@ export function Hero() {
             variants={item}
             className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-[4.25rem]"
           >
-            Building modern web
+            Building modern web 
             <br />
-            applications and
-            <br />
-            <span className="gradient-text">SaaS products.</span>
+            applications and 
+            <br /> 
+            <span className="gradient-text">digital products.</span>
+
           </motion.h1>
 
           <motion.p

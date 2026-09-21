@@ -14,28 +14,48 @@ export function Contact() {
   const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    const name = (data.get('name') as string)?.trim();
-    const email = (data.get('email') as string)?.trim();
-    const message = (data.get('message') as string)?.trim();
+        e.preventDefault();
+        const form = e.currentTarget;
+        const data = new FormData(form);
+        const name = (data.get('name') as string)?.trim();
+        const email = (data.get('email') as string)?.trim();
+        const message = (data.get('message') as string)?.trim();
 
-    const next: typeof errors = {};
-    if (!name) next.name = 'Please enter your name.';
-    if (!email) next.email = 'Please enter your email.';
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = 'Please enter a valid email.';
-    if (!message) next.message = 'Please enter a message.';
-    setErrors(next);
-    if (Object.keys(next).length > 0) return;
+        const next: typeof errors = {};
+        if (!name) next.name = 'Please enter your name.';
+        if (!email) next.email = 'Please enter your email.';
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = 'Please enter a valid email.';
+        if (!message) next.message = 'Please enter a message.';
+        setErrors(next);
+        if (Object.keys(next).length > 0) return;
 
-    setStatus('loading');
-    // Backend integration point — wire this to your email service or edge function.
-    await new Promise((r) => setTimeout(r, 1200));
-    setStatus('success');
-    form.reset();
-    setTimeout(() => setStatus('idle'), 4000);
-  };
+        setStatus('loading');
+
+        // Obtener la URL según tu framework:
+        const endpoint = import.meta.env.VITE_FORMSPREE_URL; 
+
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            body: JSON.stringify({ name, email, message }),
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+            },
+          });
+
+          if (response.ok) {
+            setStatus('success');
+            form.reset();
+            setTimeout(() => setStatus('idle'), 4000);
+          } else {
+            setStatus('error');
+          }
+        } catch (error) {
+          console.error('Error sending email:', error);
+          setStatus('error');
+        }
+    };
 
   return (
     <section id="contact" className="relative py-20 sm:py-28">
@@ -70,10 +90,27 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">Email</p>
-                  <p className="text-sm font-medium">elvinmendez.dev@gmail.com</p>
+                  <p className="text-sm font-medium">elvinmendez005@gmail.com</p>
+                </div>
+              </a>
+
+                <div className="space-y-3">
+              <a
+                href={socialLinks.email}
+                className="group flex items-center gap-3 rounded-lg border border-border bg-card/40 p-4 transition-colors hover:border-accent/30"
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-secondary">
+                  <Mail className="h-4 w-4 text-accent" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">Email</p>
+                  <p className="text-sm font-medium">elvinmanuel005@gmail.com</p>
                 </div>
               </a>
             </div>
+
+            </div>
+
 
             <div>
               <p className="mb-2 text-xs text-muted-foreground">Find me on</p>

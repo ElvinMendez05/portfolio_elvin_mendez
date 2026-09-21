@@ -3,6 +3,13 @@ import documentFrontend from "@/assets/Document_Frontend.png";
 import documentApi from "@/assets/Document_Backend.png";
 import bookApp from "@/assets/BookApp.png";
 import pokedexApp from "@/assets/Pokedex.png" 
+import ecommerceApi from "@/assets/ApiEcomerce.png"
+import cinemaManager from "@/assets/Gestor_cine.png"
+import aiPortfolioAssistant from "@/assets/chatbot.png"
+import sidekick from "@/assets/sidekick assistant.png"
+import aiClinicManager from "@/assets/crew.png"
+import taskManager from "@/assets/task.png"
+
 
 import type { Project } from '@/types';
 
@@ -20,7 +27,7 @@ export const projects: Project[] = [
     links: {
       github: 'https://github.com/elvinmendez',
     },
-    featured: true,
+    featured: false,
     accent: '199 89% 52%',
     image: 'https://images.pexels.com/photos/7947968/pexels-photo-7947968.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
     caseStudy: {
@@ -169,6 +176,51 @@ export const projects: Project[] = [
         'Maintaining a clear separation of responsibilities between the API, Domain, Application and Infrastructure layers. Implementing secure role-based authorization, centralized exception handling and consistent validation while keeping the application maintainable and easy to extend.',
     },
   },
+   
+  
+{
+  slug: 'ai-portfolio-assistant',
+  name: 'AI Portfolio Assistant',
+  tagline: 'AI-powered assistant for exploring my professional portfolio',
+  description:
+    'An AI-powered portfolio assistant that answers questions about my professional background, projects, skills and experience using OpenAI Function Calling and custom tools.',
+  status: 'completed',
+  category: 'AI Application',
+  year: '2026',
+  technologies: ['Python', 'OpenAI API', 'Function Calling', 'Gradio', 'AI Agents'],
+  links: {
+    github: 'https://github.com/ElvinMendez05/Personal-AI-Assistant',
+  },
+  featured: true,
+  accent: '270 80% 60%',
+  image: aiPortfolioAssistant,
+  caseStudy: {
+    overview:
+      'AI Portfolio Assistant is an interactive AI application that acts as a conversational version of my professional portfolio. It allows recruiters, clients and visitors to ask questions about my technical skills, professional experience and software projects through natural language.',
+
+    problem:
+      'Traditional portfolios require visitors to navigate through multiple sections to find specific information about a developer. Recruiters and clients may have different questions about technical skills, experience or projects, making a static portfolio less interactive and personalized.',
+
+    solution:
+      'An AI-powered assistant built with the OpenAI API and Function Calling. The assistant uses custom tools to retrieve and provide relevant information about my professional background, projects and technical skills. Gradio provides an interactive conversational interface where visitors can communicate naturally with the assistant.',
+
+    keyFeatures: [
+      'AI-powered conversational portfolio assistant',
+      'OpenAI API integration',
+      'Function Calling with custom tools',
+      'Questions about professional experience and skills',
+      'Project and technology information retrieval',
+      'Natural language interaction',
+      'Interactive Gradio interface',
+    ],
+
+    architecture:
+      'AI application: Python with the OpenAI API and Function Calling. Custom tools provide structured access to portfolio information, allowing the model to determine which tool is relevant based on the user request. Gradio provides the web-based conversational interface, connecting user messages with the AI assistant and tool execution workflow.',
+
+    challenges:
+      'Designing custom tools that provide the assistant with reliable and structured portfolio information while allowing natural conversations. Defining clear tool responsibilities and integrating Function Calling so the assistant can determine when additional information is required instead of relying only on static prompts.',
+  },
+},
 
   {
     slug: 'book-app',
@@ -215,6 +267,96 @@ export const projects: Project[] = [
   },
 
   {
+  slug: 'api-ecommerce',
+  name: 'E-Commerce API',
+  tagline: 'REST API for e-commerce management',
+  description:
+    'A REST API built with ASP.NET Core for managing products, categories and user authentication, with versioned endpoints, authorization and repository-based data access.',
+  status: 'completed',
+  category: 'Backend API',
+  year: '2026',
+  technologies: ['C#', '.NET', 'ASP.NET Core', 'Entity Framework Core', 'SQL Server', 'JWT', 'REST API', 'Swagger', 'Repository Pattern'],
+  links: {
+    github: 'https://github.com/ElvinMendez05/ApiEcommerce',
+  },
+  featured: true,
+  accent: '160 60% 45%',
+  image: ecommerceApi,
+  caseStudy: {
+    overview:
+      'E-Commerce API is a REST API built with ASP.NET Core for managing products, categories and user authentication. The API provides versioned endpoints for managing the e-commerce catalog, protected resources and authentication workflows, with Swagger/OpenAPI documentation for exploring and testing the available endpoints.',
+
+    problem:
+      'E-commerce applications require a reliable backend for managing products and categories while protecting administrative operations and user data. The API needs to provide organized endpoints, authentication and authorization, persistent data management and a structure that can be maintained as the application grows.',
+
+    solution:
+      'A versioned ASP.NET Core REST API that separates API controllers, data access and application models. Entity Framework Core handles database persistence, while the Repository pattern provides an abstraction for data access. JWT-based authentication and authorization protect secured endpoints, and Swagger provides interactive API documentation.',
+
+    keyFeatures: [
+      'Product management with CRUD operations',
+      'Category management with CRUD operations',
+      'User authentication and authorization',
+      'JWT-based security',
+      'Versioned REST API endpoints',
+      'Repository pattern for data access',
+      'Entity Framework Core database integration',
+      'Swagger/OpenAPI API documentation',
+    ],
+
+    architecture:
+      'Backend: ASP.NET Core Web API organized into Controllers, Models, Repository, Data and Mapping layers. Controllers expose versioned REST endpoints, Repository handles data access, Entity Framework Core manages persistence, Mapping handles model transformations, and Data contains the database context and configuration. JWT authentication and authorization protect secured resources, while Swagger documents the API.',
+
+    challenges:
+      'Designing a versioned API structure while keeping controllers and data access responsibilities separated. Implementing authentication and authorization for protected endpoints, organizing product and category relationships, and creating a reusable Repository layer for database operations.',
+  },
+},
+
+{
+  slug: 'sidekick-ai-assistant',
+  name: 'Sidekick AI Assistant',
+  tagline: 'Intelligent AI assistant for productivity and learning',
+  description:
+    'An AI-powered assistant designed to enhance productivity, support learning and automate everyday tasks through conversational AI and tool-based workflows.',
+  status: 'completed',
+  category: 'AI Application',
+  year: '2026',
+  technologies: ['Python', 'OpenAI', 'LangGraph', 'Playwright', 'Gradio', 'AI Agents'],
+  links: {
+    github: 'https://github.com/ElvinMendez05/Sidekick-AI-Assistant',
+  },
+  featured: true,
+  accent: '190 85% 55%',
+  image: sidekick,
+  caseStudy: {
+    overview:
+      'Sidekick AI Assistant is an intelligent AI-powered assistant designed to enhance productivity, support learning and automate everyday tasks. It combines conversational AI with tool-based workflows to research information, generate content, create documents, browse the web and support English learning.',
+
+    problem:
+      'Many everyday tasks require switching between different tools and workflows. Research, document creation, web browsing, file management and language learning are usually handled independently, creating unnecessary friction and repetitive work.',
+
+    solution:
+      'An agent-based AI assistant built with LangGraph and OpenAI that can reason about tasks and use external tools when necessary. Playwright enables browser automation, while Gradio provides an interactive interface for communicating with the assistant. The system can perform web searches, manage files, generate PDF documents and provide personalized English learning support.',
+
+    keyFeatures: [
+      'Web search and information research',
+      'Browser automation with Playwright',
+      'File management and document generation',
+      'PDF document generation',
+      'Grammar correction and essay evaluation',
+      'English exercises and personalized learning support',
+      'Tool-based agent workflows',
+      'Task reasoning and progress evaluation',
+    ],
+
+    architecture:
+      'AI application: Python with OpenAI and LangGraph for the agent workflow. LangGraph coordinates the assistant state and tool execution, while custom tools provide capabilities such as web research, browser automation, file management and document generation. Playwright handles browser interactions and Gradio provides the interactive web interface.',
+
+    challenges:
+      'Designing an agent workflow capable of determining which tools are required for different tasks while maintaining a reliable execution flow. Coordinating multiple tools, managing agent state and allowing the assistant to evaluate its progress and continue working until the requested objective is completed.',
+  },
+},
+
+  {
   slug: 'pokedex',
   name: 'Pokédex App',
   tagline: 'Interactive web catalog for exploring Pokémon and regions',
@@ -255,6 +397,138 @@ export const projects: Project[] = [
 
     challenges:
       'Designing clean database relationships between Pokémon and their regions using Sequelize, while implementing dynamic filtering logic on server-rendered views without full client-side framework overhead.',
+  },
+},
+
+{
+  slug: 'ai-clinic-manager',
+  name: 'AI Clinic Manager',
+  tagline: 'AI-powered healthcare appointment management system',
+  description:
+    'An AI-powered healthcare appointment management system built with a multi-agent workflow using CrewAI to help manage patients, doctors, specialties, availability and appointments.',
+  status: 'completed',
+  category: 'AI Application',
+  year: '2026',
+  technologies: ['Python', 'CrewAI', 'AI Agents', 'Gradio'],
+  links: {
+    github: 'https://github.com/ElvinMendez05/AI_Clinic_Manager',
+  },
+  featured: true,
+  accent: '145 65% 45%',
+  image: aiClinicManager,
+  caseStudy: {
+    overview:
+      'AI Clinic Manager is an AI-powered healthcare appointment management system developed using a multi-agent workflow with CrewAI. The application provides an interactive interface for managing patients, doctors, medical specialties, availability schedules and appointments.',
+
+    problem:
+      'Healthcare appointment management involves coordinating patients, doctors, specialties and availability schedules. Handling these workflows manually can make it difficult to organize appointment information and coordinate the different actors involved in the process.',
+
+    solution:
+      'An AI-powered application built around a multi-agent workflow using CrewAI. Specialized agents collaborate to handle different aspects of the clinic management workflow, while the interactive web interface provides a way for users to interact with the system and manage appointment-related information.',
+
+    keyFeatures: [
+      'Patient management',
+      'Doctor management',
+      'Medical specialty management',
+      'Doctor availability schedules',
+      'Appointment management',
+      'Multi-agent workflow with CrewAI',
+      'Interactive web interface',
+    ],
+
+    architecture:
+      'AI application: Python with CrewAI for the multi-agent workflow. Specialized agents collaborate to process different clinic management tasks, while the application interface provides interactive access to patients, doctors, specialties, schedules and appointments. The architecture separates agent responsibilities according to the workflow requirements.',
+
+    challenges:
+      'Designing a multi-agent workflow where each agent has a clearly defined responsibility while allowing the agents to collaborate effectively. Coordinating appointment-related information across patients, doctors, specialties and availability schedules while keeping the workflow understandable and maintainable.',
+  },
+},
+
+{
+  slug: 'cinema-manager',
+  name: 'Cinema Manager',
+  tagline: 'Movie and genre catalog management application',
+  description:
+    'A web application built with Node.js and Express using MVC architecture, allowing users to manage a catalog of movies and genres with a structured and user-friendly interface.',
+  status: 'completed',
+  category: 'Web Application',
+  year: '2025',
+  technologies: ['Node.js', 'Express', 'JavaScript', 'Handlebars', 'Sequelize', 'JSON', 'MVC'],
+  links: {
+    github: 'https://github.com/ElvinMendez05/GestorCine-MVC-Express',
+  },
+  featured: true,
+  accent: '160 60% 45%',
+  image: cinemaManager,
+  caseStudy: {
+    overview:
+      'Cinema Manager is a web application developed with Node.js and Express following the MVC architecture. The application provides a simple interface for managing a catalog of movies and genres, with Handlebars for server-side rendered views and JSON files for data persistence.',
+
+    problem:
+      'Managing a movie catalog manually can make it difficult to organize movies and genres efficiently. A structured application is needed to provide a centralized interface for creating, viewing and managing catalog information.',
+
+    solution:
+      'A Node.js and Express application structured using the MVC pattern. Handlebars is used for server-side rendered views, while JSON files provide simple data persistence. The application separates controllers, models and views to keep the project organized and maintainable.',
+
+    keyFeatures: [
+      'Movie catalog management',
+      'Genre management',
+      'Server-side rendered views with Handlebars',
+      'JSON-based data persistence',
+      'MVC architecture',
+      'Express-based routes',
+      'Structured and user-friendly interface',
+    ],
+
+    architecture:
+      'Backend: Node.js + Express following the MVC architecture. Controllers handle application requests and logic, models manage movie and genre data, and Handlebars provides server-side rendered views. JSON files are used for data persistence, keeping the application lightweight and simple to maintain.',
+
+    challenges:
+      'Structuring the application using MVC while maintaining a simple data persistence strategy with JSON files. Organizing movie and genre management workflows and connecting the backend logic with dynamic Handlebars views.',
+  },
+},
+
+{
+  slug: 'task-manager',
+  name: 'Task Manager',
+  tagline: 'Task management web application',
+  description:
+    'A web application built with Python and Django for creating, organizing and managing tasks through a structured and user-friendly interface.',
+  status: 'completed',
+  category: 'Web Application',
+  year: '2026',
+  technologies: ['Python', 'Django', 'SQLite', 'HTML', 'CSS', 'JavaScript'],
+  links: {
+    github: 'https://github.com/ElvinMendez05/task-django',
+  },
+  featured: true,
+  accent: '45 90% 55%',
+  image: taskManager,
+  caseStudy: {
+    overview:
+      'Task Manager is a web application developed with Python and Django that allows users to create, organize and manage tasks. The application uses Django models for data management, forms for user input, views for application logic and templates for rendering the user interface.',
+
+    problem:
+      'Managing tasks without a centralized system can make it difficult to keep track of pending work and organize daily activities. Users need a simple interface where they can create, review and manage their tasks efficiently.',
+
+    solution:
+      'A Django-based web application that provides a structured task management workflow. Django handles the application logic, database models, forms and routing, while templates and static assets provide the user interface. SQLite is used for local data persistence.',
+
+    keyFeatures: [
+      'Task creation and management',
+      'Task organization and tracking',
+      'Django forms for data input',
+      'Database persistence with SQLite',
+      'Server-side rendered Django templates',
+      'Structured MVC-style Django architecture',
+      'Admin interface for data management',
+    ],
+
+    architecture:
+      'Backend: Python + Django using Django models, views, forms and templates. Models define the task data structure, views handle application logic and requests, forms manage user input and validation, and templates render the web interface. SQLite is used as the database and Django migrations manage database schema changes.',
+
+    challenges:
+      'Structuring the application around Django conventions while keeping task management workflows simple and maintainable. Connecting models, forms, views and templates into a consistent workflow and managing persistent task data through Django migrations and SQLite.',
   },
 },
   

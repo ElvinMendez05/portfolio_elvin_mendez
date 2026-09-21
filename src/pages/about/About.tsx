@@ -15,51 +15,6 @@ export const About = () => {
         />
 
         <div className="mt-12 grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:gap-12">
-          {/* <Reveal className="space-y-5">
-            <div className="flex items-start gap-4">
-              <div className="relative shrink-0 overflow-hidden rounded-2xl border border-border bg-secondary">
-                <img
-                  src="https://images.pexels.com/photos/6804094/pexels-photo-6804094.jpeg?auto=compress&cs=tinysrgb&h=400&w=400"
-                  alt="Elvin Mendez"
-                  className="h-24 w-24 object-cover sm:h-28 sm:w-28"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 ring-1 ring-inset ring-accent/20 rounded-2xl" />
-              </div>
-              <div className="pt-1">
-                <h3 className="text-lg font-semibold">Elvin Mendez</h3>
-                <p className="text-sm text-muted-foreground">Software Developer</p>
-              </div>
-            </div>
-            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-              I'm a software developer graduated from the{' '}
-              <span className="text-foreground">Software Development Technology</span> program at
-              ITLA. My main focus is building web applications and SaaS products with React and
-              TypeScript, with solid experience on the backend side using Node.js, Express and .NET.
-            </p>
-            <p className="text-base leading-relaxed text-muted-foreground sm:text-lg">
-              I care about building things that work — not just demos. I'm especially interested in
-              SaaS, web applications, APIs, AI-powered products and product development. I enjoy
-              turning an idea into a real, usable product.
-            </p>
-
-            <div className="pt-2">
-              <h3 className="text-sm font-medium uppercase tracking-[0.14em] text-muted-foreground">
-                What I care about
-              </h3>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {aboutValues.map((value) => (
-                  <span
-                    key={value}
-                    className="inline-flex items-center rounded-lg border border-border bg-secondary/50 px-3 py-1.5 text-sm font-medium text-foreground/90"
-                  >
-                    {value}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </Reveal> */}
-
           <Reveal className="space-y-5">
             <div className="flex items-center gap-5">
               <div className="relative shrink-0">
@@ -121,7 +76,7 @@ export const About = () => {
                 <div>
                   <h3 className="text-sm font-semibold">Education - Software Development </h3>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Tecnólogo en Desarrollo de Software 
+                    Software Development Technologist
                   </p>
                   <p className="text-xs text-muted-foreground/70">ITLA</p>
                 </div>
@@ -136,7 +91,7 @@ export const About = () => {
                 <div>
                   <h3 className="text-sm font-semibold">Eduaction — Software Engineer</h3>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Ingenieria de Software 
+                    Software Engineer 
                   </p>
                    <p className="text-xs text-muted-foreground/70">UNICARIBE</p>
                 </div>
@@ -149,7 +104,7 @@ export const About = () => {
                   <Languages className="h-5 w-5 text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold">English — (C1-C2)</h3>
+                  <h3 className="text-sm font-semibold">English — Advanced</h3>
                   <p className="mt-1 text-sm text-muted-foreground">
                     Advanced level, comfortable working in international teams.
                   </p>
